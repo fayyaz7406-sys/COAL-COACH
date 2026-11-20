@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ur" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Computer Organization & Assembly Language — Midterm Exam Prep Coach. Bilingual (Roman Urdu / English), quizzes, mock tests, notes, analytics aur numerical labs.">
+  <title>COAL Coach — Midterm Prep</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div class="brand-text">
+          <strong>COAL <span>Coach</span></strong>
+          <small id="brandSub">Midterm Prep · L1–L8</small>
+        </div>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+
+      <nav id="nav"></nav>
+
+      <div class="sidebar-foot">
+        <div class="mini-progress-head">
+          <span id="miniLabel">Aapki taiyari</span>
+          <strong id="miniPct">0%</strong>
+        </div>
+        <div class="bar"><div class="bar-fill" id="miniBar" style="width:0%"></div></div>
+        <p id="miniHint">Pehla topic padhkar shuru karein.</p>
+        <div class="side-countdown" id="sideCountdown"></div>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="crumb" id="crumb">Dashboard</div>
+        <div class="top-actions">
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input id="search" type="search" placeholder="Topic ya question search karein..." autocomplete="off" aria-label="Search">
+            <div class="search-results" id="searchResults" hidden></div>
+          </div>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button data-lang="ur" class="active">اردو</button>
+            <button data-lang="en">EN</button>
+          </div>
+          <button class="icon-btn text-btn" id="fontBtn" title="Font size" aria-label="Font size">Aa</button>
+          <button class="icon-btn" id="focusBtn" title="Focus mode" aria-label="Focus mode">⛶</button>
+          <button class="icon-btn" id="pomoBtn" title="Pomodoro timer" aria-label="Pomodoro timer">⏱</button>
+          <button class="icon-btn" id="themeBtn" title="Theme" aria-label="Toggle theme">◐</button>
+        </div>
+      </header>
+
+      <main id="view" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <span>COAL Coach · Teacher ke notes (Lectures 1–8) par based</span>
+        <span class="dot">•</span>
+        <span>100% offline · Progress aapke browser mein save hoti hai</span>
+      </footer>
+    </div>
+  </div>
+
+  <div class="pomo-widget collapsed" id="pomoWidget" aria-label="Pomodoro timer">
+    <div class="pomo-head">
+      <span id="pomoMode">Focus</span>
+      <button id="pomoClose" aria-label="Close timer">×</button>
+    </div>
+    <div class="pomo-ring" id="pomoRing"><div><strong id="pomoTime">25:00</strong><small id="pomoSessions">0 sessions</small></div></div>
+    <div class="pomo-actions">
+      <button class="btn sm primary" id="pomoToggle">Start</button>
+      <button class="btn sm" id="pomoReset">Reset</button>
+      <button class="btn sm" id="pomoSwitch">Break</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="data.en.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
